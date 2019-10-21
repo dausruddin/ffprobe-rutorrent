@@ -1,0 +1,9 @@
+plugin.description: This plugin is intended to get FFprobe information.
+plugin.author: Novik (edited by Firdaus Ahmad)
+plugin.version: 3.9
+rtorrent.remote: error
+rtorrent.external.error: ffprobe
+plugin.dependencies: _task
+plugin.runlevel: 12
+php.extensions.error: json
+; plugin.help: https://github.com/Novik/ruTorrent/wiki/PluginFFprobe
