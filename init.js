@@ -1,4 +1,4 @@
-plugin.loadLang();
+plugin.loadLang(true);
 
 if(plugin.canChangeMenu()) 
 {
@@ -12,7 +12,7 @@ if(plugin.canChangeMenu())
 	{
 		if(plugin.createFileMenu.call(this, e, id)) 
 		{
-			if(plugin.enabled) 
+			if(plugin.enabled && plugin.allStuffLoaded) 
 			{
 //				theContextMenu.add([CMENU_SEP]);
 				var fno = null;
@@ -29,8 +29,6 @@ if(plugin.canChangeMenu())
 					if(!this.dirs[this.dID].isDirectory(fid))
 						fno = fid.substr(3);
 				}
-                console.log(theUILang);
-                console.log('ffprobe:' + theUILang.ffprobe);
 				theContextMenu.add( [theUILang.ffprobe,  (fno==null) ? null : "theWebUI.ffprobe('" + theWebUI.dID + "',"+fno+")"] );
 			}
 			return(true);
