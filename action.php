@@ -58,7 +58,7 @@ if(isset($_REQUEST['hash']) &&
 						$flags = "--Inform=file://".escapeshellarg($randName);
 					}
 					$commands[] = getExternal("ffprobe")." ".$flags." ".escapeshellarg($filename);
-					$ret = $task->start($commands, rTask::FLG_WAIT + rTask::FLG_NO_ERR);
+					$ret = $task->start($commands, rTask::FLG_ONE_LOG);
 				}
 			}
 			break;
